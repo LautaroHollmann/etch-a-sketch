@@ -10,5 +10,25 @@ for (let i=0; i<256; i++) {
     container.appendChild(gridDivs);
 }
 
+const hoverableGridDivs = document.querySelectorAll(".gridDivs");
 
-// make these 256 divs flex and square in a 16x16 grid within the container div!
+hoverableGridDivs.forEach((element) => {
+    element.addEventListener("mouseover", (e1) => {
+        element.classList.add("active");
+    });
+});
+
+
+/*Alternative hover in jss through event delegation (stays):
+document.addEventListener("mouseover", (e2) => {
+  if (e2.target.classList.contains("gridDivs")) {
+    e2.target.style.backgroundColor = "red";
+  }
+});
+
+document.addEventListener("mouseout", (e3) => {
+  if (e3.target.classList.contains("gridDivs")) {
+    e3.target.style.backgroundColor = "blue";
+  }
+});
+*/

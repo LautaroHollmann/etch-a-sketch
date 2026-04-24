@@ -3,12 +3,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-width: 960px;
+    justify-self: center;
 }
 
 .gridDivs {
     display: flex;
     border: 1px solid red;
-    padding: 16px;
-    width: 60px;
-    height: 60px;
+    padding: 28px;
+    width: auto;
 }
+
+.gridDivs.active {
+    background-color: yellow;
+}
+
+/* Simple hover (temporary):
+.gridDivs:hover {
+    background-color: yellow;
+}
+*/
