@@ -1,10 +1,12 @@
 body {
     text-align: center;
     font-weight: bold;
+    background-color: rgb(131, 179, 142);
+    color: white;
 }
 
 .container {
-    border: 2px solid blue;
+    border: 2px solid rgb(12, 56, 2);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -12,6 +14,7 @@ body {
     height: 620px;
     justify-self: center;
     margin-bottom: 6px;
+    background-color: rgb(243, 232, 221)
 }
 
 .gridDivs {
