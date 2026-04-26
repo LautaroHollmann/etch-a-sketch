@@ -13,7 +13,7 @@ container.addEventListener("click", () => {
 generateNewGrid(16);
 
 gridBtn.addEventListener("click", () => {
-  const input = prompt("Please enter the new grid size (1-100)");
+  const input = prompt("Please enter the new grid size (1-100)", "64");
   if (input === null) return;
 
   //conversion of valid numeric strings to numbers:
@@ -41,6 +41,9 @@ function generateNewGrid(size) {
   const cellSize = 100 / size;
 
   for (let i = 0; i < size * size; i++) {
+
+   let color = Math.floor(Math.random() * (4 - 1 + 1) + 1);
+
     const gridDivs = document.createElement("div");
     gridDivs.className = "gridDivs";
 
@@ -49,14 +52,22 @@ function generateNewGrid(size) {
     gridDivs.style.height = `${cellSize}%`;
 
     gridDivs.addEventListener("mouseover", () => {
-      if (isDrawing) {
+      if (isDrawing && color === 1) {
         gridDivs.classList.add("active");
+      } else if (isDrawing && color === 2) {
+        gridDivs.classList.add("red");
+      } else if (isDrawing && color === 3) {
+        gridDivs.classList.add("blue");
+      } else if (isDrawing && color === 4) {
+        gridDivs.classList.add("yellow");
       }
     });
 
     container.appendChild(gridDivs);
   }
 }
+
+
 
 
 /*Alternative hover in js through event delegation (stays):

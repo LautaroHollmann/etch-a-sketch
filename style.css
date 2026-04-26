@@ -26,6 +26,18 @@ body {
     background-color: rgb(92, 246, 74);
 }
 
+.gridDivs.red {
+    background-color: rgb(255, 0, 0);
+}
+
+.gridDivs.blue {
+    background-color: rgb(0, 30, 255);
+}
+
+.gridDivs.yellow {
+    background-color: rgb(251, 255, 0);
+}
+
 .btnDiv {
     display: flex;
     justify-content: center;
